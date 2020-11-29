@@ -33,6 +33,7 @@ void bf_run(char *program, size_t memory_size)
             break;
         case ',':
             memory[ptr] = getchar();
+            getchar();
             break;
         case '.':
             putchar(memory[ptr]);
