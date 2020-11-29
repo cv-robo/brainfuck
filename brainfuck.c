@@ -8,7 +8,7 @@ void bf_run(char *program, size_t memory_size)
 {
     size_t program_size = strlen(program);
     char *stack = (char *)malloc(program_size);
-    char *memory = (char *)malloc(memory_size);
+    char *memory = (char *)calloc(memory_size, sizeof(char));
     size_t pc = 0, sp = 0, ptr = memory_size / 2;
     for (; pc < program_size; pc++)
     {
