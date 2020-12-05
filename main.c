@@ -1,8 +1,8 @@
 #include <stdio.h>
+
 #include "brainfuck.h"
 
-int main(void)
-{
+int main(void) {
     char program[1024];
     scanf("%s", program);
     getchar();
