@@ -4,8 +4,7 @@
 
 int main(void) {
     char program[1024];
-    scanf("%s", program);
-    getchar();
+    fgets(program, 1024, stdin);
     bf_run(program, 1024, 1024);
     return 0;
 }
