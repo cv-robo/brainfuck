@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void bf_run(char *program, size_t memory_size) {
+void bf_run(char *program, size_t stack_size, size_t memory_size) {
     size_t program_size = strlen(program);
-    char *stack = (char *)malloc(program_size);
+    char *stack = (char *)calloc(stack_size, sizeof(char));
     char *memory = (char *)calloc(memory_size, sizeof(char));
     if (!(stack && memory)) {
         printf("memory allocation failed.\n");
