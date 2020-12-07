@@ -6,8 +6,8 @@
 
 void bf_run(char *program, size_t memory_size) {
     size_t program_size = strlen(program);
-    size_t *stack = (char *)malloc(program_size * sizeof(size_t));
-    size_t *jmp_table = (char *)malloc(program_size * sizeof(size_t));
+    size_t *stack = (size_t *)malloc(program_size * sizeof(size_t));
+    size_t *jmp_table = (size_t *)malloc(program_size * sizeof(size_t));
     char *memory = (char *)calloc(memory_size, sizeof(char));
     if (!(stack && jmp_table && memory)) {
         printf("memory allocation failed.\n");
