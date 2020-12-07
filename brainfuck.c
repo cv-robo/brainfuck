@@ -50,8 +50,9 @@ void bf_run(char *program, size_t memory_size) {
                 memory[ptr]--;
                 break;
             case ',':
-                memory[ptr] = getchar();
-                getchar();
+                do {
+                    memory[ptr] = getchar();
+                } while (memory[ptr] == '\n' || memory[ptr] == '\r');
                 break;
             case '.':
                 putchar(memory[ptr]);
@@ -64,7 +65,6 @@ void bf_run(char *program, size_t memory_size) {
                 break;
         }
     }
-    putchar('\n');
     free(stack);
     free(jmp_table);
     free(memory);
