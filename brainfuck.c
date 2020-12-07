@@ -50,9 +50,7 @@ void bf_run(char *program, size_t memory_size) {
                 memory[ptr]--;
                 break;
             case ',':
-                do {
-                    memory[ptr] = getchar();
-                } while (memory[ptr] == '\n' || memory[ptr] == '\r');
+                memory[ptr] = getchar();
                 break;
             case '.':
                 putchar(memory[ptr]);
