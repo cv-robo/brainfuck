@@ -3,6 +3,6 @@
 
 #include <stddef.h>
 
-extern void bf_run(char *, size_t, size_t);
+extern void bf_run(char *, size_t);
 
 #endif
