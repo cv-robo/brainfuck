@@ -32,7 +32,7 @@ void bf_run(char *program, size_t memory_size) {
         }
     }
     for (pc = 0; pc < program_size; pc++) {
-        if (ptr < 0 || ptr >= memory_size) {
+        if (ptr >= memory_size) {
             printf("pointer out of range.\n");
             break;
         }
